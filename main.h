@@ -11,7 +11,8 @@ int (*check_special_char(const char *format))(va_list);
 int printChar(va_list);
 int printStr(va_list);
 int printCent(va_list);
-
+int printDec(va_list args);
+int printInt(va_list args);
 /**
  * struct struct_withFunc - struct with functions to identify special chars
  * @t: character function
