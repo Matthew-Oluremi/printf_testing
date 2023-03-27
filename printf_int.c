@@ -29,11 +29,12 @@ int printInt(va_list args)
 	}
 
 	/*loop through individual digit array*/
-	for (i; i >= 0; i--)
+	while (i >= 0)
 	{
 		/*convert integer to char and save to char array*/
 		tmpChar[0] = (48 + int_array[i]);
-		numOfBytes = numOfBytes + write(1, x, 1);
+		numOfBytes = numOfBytes + write(1, tmpChar, 1);
+		i--;
 	}
 	return (numOfBytes);
 }
