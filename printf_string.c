@@ -21,20 +21,20 @@ int printStr(va_list args)
 	itterator = 0;
 
 	/*use variadic variable to extract string argument from print*/
-	str = va_arg(args, char *);
+	strArg = va_arg(args, char *);
 
 	/*check if va_arg returned null*/
-	if (str == NULL)
+	if (strArg == NULL)
 	{
 		return (-1);
 	}
 
 	/*use while loop to itterate through str variable*/
-	while (str[i])
+	while (strArg[itterator])
 	{
 		/*assign number of bytes returned by write to numOfBytes*/
-		numOfBytes = write(1, &str[i], 1);
-		i++;
+		numOfBytes = write(1, &strArg[itterator], 1);
+		itterator++;
 	}
 	return (numOfBytes);
 }

@@ -13,12 +13,9 @@
 int _printf(const char *format, ...)
 {
 	int i, numOfBytes, tmp;
-
 	va_list args;
-
-	va_start(args, format);
-
 	int (*f)(va_list);
+	va_start(args, format);
 
 	if (format == NULL)
 		return (-1);

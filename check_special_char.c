@@ -22,13 +22,13 @@ int (*check_special_char(const char *format))(va_list)
 		};
 
 	/*loop through struct*/
-	for (i = 0; specialChars[i].t != NULL; i++)
+	for (itterator = 0; specialChars[itterator].t != NULL; itterator++)
 	{
 		/*check if special characters defined in struct matches character*/
-		if (*(specialChars[i].t) == *format)
+		if (*(specialChars[itterator].t) == *format)
 		{
 			/*if special character mmatches, return pointer to function*/
-			return (specialChars[i].f);
+			return (specialChars[itterator].f);
 		}
 	}
 	return (NULL);
