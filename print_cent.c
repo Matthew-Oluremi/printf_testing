@@ -12,7 +12,7 @@ int printCent(va_list args)
 
 	(void)args;
 
-/*use write function to simply print % and allocate to numOfBytes*/
+	/*use write function to simply print % and allocate to numOfBytes*/
 	numOfBytes = write(1, "%", 1);
 
 	return (numOfBytes);
