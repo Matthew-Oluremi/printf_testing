@@ -11,16 +11,15 @@
 
 int printChar(va_list args)
 {
-	int byteS = 0;
-
+	int byteS;
 	char c;
 
+	byteS = 0;
 	c = (char)va_arg(args, int);
 
 	if (c)
 	{
-		write(1, &c, 1);
-		byteS++;
+		byteS = write(1, &c, 1);
 		return (byteS);
 	}
 	return (0);
