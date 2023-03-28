@@ -18,8 +18,9 @@ int (*check_special_char(const char *format))(va_list)
 		{"c", printChar},
 		{"s", printStr},
 		{"%", printCent},
-		{NULL, NULL}
-		};
+		{"i", print_int},
+		{"d", print_dec},
+		{NULL, NULL}};
 
 	/*loop through struct*/
 	for (itterator = 0; specialChars[itterator].t != NULL; itterator++)
