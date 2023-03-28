@@ -15,7 +15,9 @@ int printDec(va_list args)
 	char tmpChar[1];
 
 	tmp = va_arg(args, int);/*save parameter extracted from printf*/
-
+	i = 0;
+	numOfBytes = 0;
+	
 	while (tmp != 0)
 	{
 		int_array[i] = (tmp % 10);/*save individual digits to array*/
